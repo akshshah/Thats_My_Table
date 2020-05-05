@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textColor="#2196F3"
+        android:id="@+id/txtSignUp"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-black"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        android:layout_below="@+id/txtSignUp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:id="@+id/editName"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:id="@+id/editEmail"
+            android:layout_below="@+id/editName"
+            android:layout_marginTop="20dp"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:id="@+id/editPass"
+            android:layout_below="@+id/editEmail"
+            android:layout_marginTop="20dp"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone number"
+            android:id="@+id/editNumber"
+            android:layout_below="@+id/editPass"
+            android:layout_marginTop="20dp"
+            android:inputType="textPhonetic"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/secondLayout"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Sign-up"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#FBFAFA"
+            android:background="#F44336"
+            android:id="@+id/btnSignUp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLogin"
+            android:textColor="#2196F3"
+            android:text="Already Register? Login Here"
+            android:layout_below="@+id/btnSignUp"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20sp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/secondLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/progress_circular"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant Name"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/restName"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restName"
+        android:layout_marginTop="30dp"
+        android:id="@+id/firstLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Booking Date : "
+            android:id="@+id/txtDate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_toRightOf="@+id/txtDate"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:id="@+id/btnDate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time : "
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_below="@+id/txtDate"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txtTime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtDate"
+            android:layout_toRightOf="@id/txtTime"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnTime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table Number : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtTime"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txtTable"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtTime"
+            android:layout_toRightOf="@id/txtTable"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tableNo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Cost : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtTable"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txtCost"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtTable"
+            android:layout_toRightOf="@id/txtCost"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bookCost"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/firstLayout"
+        android:text="Please Select all fields!"
+        android:textColor="#F44336"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make Payment"
+        android:backgroundTint="#F44336"
+        android:textColor="#ffff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/warning"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:id="@+id/btnPayment"/>
+
+</RelativeLayout>

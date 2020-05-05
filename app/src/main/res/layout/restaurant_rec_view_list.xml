@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:padding="7dp"
+    app:cardElevation="7dp"
+    app:cardCornerRadius="7dp"
+    android:layout_margin="7dp"
+    android:id="@+id/parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/restImage"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/restImage"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Name"
+                android:textSize="17sp"
+                android:id="@+id/restName"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#F44336"
+                android:layout_below="@id/restName"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:id="@+id/restAddress"
+                android:layout_below="@+id/restName"
+                android:layout_marginTop="8dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#F44336"
+                android:layout_below="@id/restAddress"
+                android:layout_marginTop="7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restAddress"
+                android:layout_marginTop="7dp"
+                android:id="@+id/txtCost"
+                android:text="Cost for two: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restAddress"
+                android:layout_toRightOf="@+id/txtCost"
+                android:layout_marginTop="7dp"
+                android:id="@+id/restCost2"
+                android:text="Cost "/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/star"
+                android:layout_toRightOf="@+id/restCost2"
+                android:src="@drawable/ic_filled_star"
+                android:layout_below="@+id/restAddress"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="18dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restAddress"
+                android:text="4.5"
+                android:id="@+id/restRating"
+                android:layout_marginTop="7dp"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/star"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

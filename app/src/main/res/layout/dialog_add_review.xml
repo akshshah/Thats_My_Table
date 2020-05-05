@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtreview"
+            android:text="Your review about: "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/restName"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:text="Restaurant Name"
+            android:layout_toRightOf="@+id/txtreview"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editName"
+        android:hint="Enter Your Name"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editReview"
+        android:hint="Your Review"
+        android:lines="5"
+        android:gravity="start"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="81dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Please fill all of the fields!"
+        android:textColor="#F44336"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Review"
+        android:id="@+id/addReview"
+        android:layout_gravity="center"
+        android:backgroundTint="#F44336"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"/>
+
+
+</LinearLayout>

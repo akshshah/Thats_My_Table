@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Gateway"
+        android:layout_marginTop="15dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txtPayment"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPayment"
+        android:layout_marginTop="30dp"
+        android:id="@+id/firstLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Restaurant Name : "
+            android:id="@+id/txtName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_toRightOf="@+id/txtName"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:id="@+id/restName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtName"
+            android:layout_marginTop="20dp"
+            android:text="Booking Date : "
+            android:id="@+id/txtDate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:layout_below="@+id/txtName"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_toRightOf="@+id/txtDate"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:id="@+id/btnDate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time : "
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_below="@+id/txtDate"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txtTime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtDate"
+            android:layout_toRightOf="@id/txtTime"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnTime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table Number : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtTime"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txtTable"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtTime"
+            android:layout_toRightOf="@id/txtTable"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tableNo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Cost : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtTable"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txtCost"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/txtTable"
+            android:layout_toRightOf="@id/txtCost"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bookCost"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymentMethodRelLayout"
+        android:layout_below="@id/firstLayout"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a payment method: "
+            android:textSize="18sp"
+            android:textColor="#F44336"
+            android:textStyle="bold"
+            android:id="@+id/paymentMethodExplain"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rgPaymentMethods"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/paymentMethodExplain">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Debit Card"
+                android:id="@+id/rbDebitCard"
+                android:checked="true"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Internet Banking"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/rbInternetBanking"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UPI"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/rbUPI"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonsRelLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:background="#F44336"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:id="@+id/btnBack"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="finish"
+            android:background="#F44336"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            android:id="@+id/btnFinish"
+            android:layout_toRightOf="@+id/btnBack"
+            android:layout_marginLeft="40dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="435dp"
+    android:padding="8dp"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp"
+    android:id="@+id/parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Name"
+            android:layout_marginTop="7dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#F44336"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/restName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/restName"
+            android:layout_marginTop="7dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Booking Date : "
+            android:id="@+id/txtDate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Date"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/restName"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_toRightOf="@+id/txtDate"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"
+            android:id="@+id/btnDate"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time : "
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_below="@+id/txtDate"
+            android:layout_marginTop="7dp"
+            android:id="@+id/txtTime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:textSize="18sp"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/txtDate"
+            android:layout_toRightOf="@id/txtTime"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnTime"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table Number : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtTime"
+            android:layout_marginTop="7dp"
+            android:id="@+id/txtTable"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/txtTime"
+            android:layout_toRightOf="@id/txtTable"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tableNo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Booking Cost : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtTable"
+            android:layout_marginTop="7dp"
+            android:id="@+id/txtCost"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cost"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/txtTable"
+            android:layout_toRightOf="@id/txtCost"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/bookCost"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Mode : "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/txtCost"
+            android:layout_marginTop="7dp"
+            android:id="@+id/txtMode"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mode"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/bookCost"
+            android:layout_toRightOf="@id/txtMode"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/mode"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/txtMode"
+            android:id="@+id/qrCode"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel Booking"
+            android:background="#F44336"
+            android:textColor="#FDFDFD"
+            android:textStyle="bold"
+            android:layout_below="@+id/qrCode"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/btnCancel"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

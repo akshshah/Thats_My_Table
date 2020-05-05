@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="My Bookings"
+        android:id="@+id/btnBookings"
+        android:icon="@drawable/ic_booking"/>
+
+    <item
+        android:title="Cuisines"
+        android:id="@+id/categories"
+        android:icon="@drawable/ic_cuisine"/>
+
+    <item
+        android:title="Log Out"
+        android:id="@+id/logOut"
+        android:icon="@drawable/ic_logout"/>
+</menu>

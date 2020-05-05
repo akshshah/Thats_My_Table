@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RestaurantActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#F44336"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:text="Book A Table"
+        android:id="@+id/btnBookTable"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nestedScroll"
+        android:layout_below="@+id/btnBookTable"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restaurant Name"
+                    android:textColor="#FD0A0A0A"
+                    android:id="@+id/restName"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Cost"
+                    android:id="@+id/bookCost"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/firstLayout"
+                android:id="@+id/secondLayout"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:id="@+id/restImage"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:layout_width="120dp"
+                    android:textColor="#F6F1F1"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnPerigon"
+                    android:background="#2196F3"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/restImage"
+                    android:text="Perigon View" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnMenu"
+                    android:background="#2196F3"
+                    android:textColor="#F6F1F1"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:text="Menu"
+                    android:layout_toRightOf="@id/btnPerigon"
+                    android:layout_below="@+id/restImage"
+                    android:layout_marginLeft="55dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tables Available"
+                android:layout_below="@id/secondLayout"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="15sp"
+                android:id="@+id/txtAvail"/>
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_below="@id/secondLayout"
+                android:layout_toRightOf="@id/txtAvail"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="12dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/starsLayout"
+                android:layout_below="@id/secondLayout"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentRight="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/firstStarLayout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/firstEmptyStar"
+                        android:src="@drawable/ic_empty_star"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/firstFilledStar"
+                        android:src="@drawable/ic_filled_star"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/secondStarLayout"
+                    android:layout_toRightOf="@id/firstStarLayout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/secondEmptyStar"
+                        android:src="@drawable/ic_empty_star"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/secondFilledStar"
+                        android:src="@drawable/ic_filled_star"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/thirdStarLayout"
+                    android:layout_toRightOf="@id/secondStarLayout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/thirdEmptyStar"
+                        android:src="@drawable/ic_empty_star"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/thirdFilledStar"
+                        android:src="@drawable/ic_filled_star"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/review"
+                android:text="Reviews: "
+                android:textColor="#FD0A0A0A"
+                android:textStyle="bold|italic"
+                android:layout_below="@id/txtAvail"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reviewLayout"
+                android:layout_below="@+id/review"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_add_review"
+                    android:id="@+id/addImage"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(Add a Review)"
+                    android:textColor="@color/colorAccent"
+                    android:layout_toRightOf="@id/addImage"
+                    android:layout_marginLeft="10dp"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reviewRecView"
+                android:layout_below="@+id/reviewLayout"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
